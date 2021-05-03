@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Perfil de paciente</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/icon.ico">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="">
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700" rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADER =============================-->
+<header class="item header margin-top-0">
+<div class="wrapper">
+	<nav role="navigation" class="navbar navbar-white navbar-embossed navbar-lg navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button data-target="#navbar-collapse-02" data-toggle="collapse" class="navbar-toggle" type="button">
+			<i class="fa fa-bars"></i>
+			<span class="sr-only">Toggle navigation</span>
+			</button>
+			<a href="../index.html" class="navbar-brand brand"> <img src="../images/logo2p.png" alt="UHospital"> </a>
+		</div>
+		<div id="navbar-collapse-02" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="propClone"><a href="../Paciente/inicio.html">Regresar</a></li>
+				<li class="propClone"><a href="../index.html">Cerrar sesión</a></li>
+			
+			</ul>
+		</div>
+	</div>
+	</nav>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<div class="">
+					<div class="subtext-image" data-scrollreveal="enter bottom over 1.7s after 0.0s">
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</header>
+
+<!-- CONTENT =============================-->
+<section class="item content">
+<div class="container toparea">
+	<div class="underlined-title">
+		<div class="editContent">
+			<h1 class="text-center latestitems">MAKE PAYMENT</h1>
+		</div>
+		<div class="wow-hr type_short">
+			<span class="wow-hr-h">
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+			</span>
+		</div>
+	</div>
+<br><br>
+		<div id="edd_checkout_form_wrap" class="edd_clearfix">
+			<form id="" class="edd_form" onsubmit="actualizar(); return false" >
+				<fieldset id="edd_checkout_user_info">
+					<legend>Información de perfil</legend>
+					<p id="edd-email-wrap">
+						<label class="edd-label" for="usuario">
+						Nombre de usuario <span class="edd-required-indicator">*</span></label>
+						<input class="edd-input required" type="text" name="edd_email" placeholder="" id="usuario"  readonly>
+					</p>
+					<p id="edd-first-name-wrap">
+						<label class="edd-label" for="nombre">
+						Nombre <span class="edd-required-indicator">*</span>
+						</label>
+						<input class="edd-input required" type="text"  placeholder="Nombre" id="nombre" value="" required>
+					</p>
+					<p id="edd-last-name-wrap">
+						<label class="edd-label" for="apellido">
+						Apellido <span class="edd-required-indicator">*</span></label>
+						<input class="edd-input required" type="text" name="edd_last" id="apellido" placeholder="Apellido" value="" required>
+					</p>
+					<p id="edd-last-name-wrap">
+						<label class="edd-label" for="fecha">
+						Fecha de nacimiento <span class="edd-required-indicator">*</span></label>
+						<input class="edd-input required" type="" name="edd_last" id="fecha" placeholder="" value="" required>
+					</p>
+					<p id="edd-last-name-wrap">
+						<label class="edd-label" for="sexo">
+						Sexo <span class="edd-required-indicator">*</span></label>
+						<input class="edd-input required" type="text" name="edd_last" id="sexo" placeholder="Sexo" value="" required>
+					</p>
+					<p id="edd-last-name-wrap">
+						<label class="edd-label" for="password">
+						Contraseña <span class="edd-required-indicator">*</span></label>
+						<input class="edd-input required" type="text" name="edd_last" id="password" placeholder="Contraseña" value="" required minlength="8">
+						<script>
+							var input = document.getElementById('password');
+							input.invalid = function(event) { event.target.setCustomValidity('La contraseña debe contener por lo menos 8 caracteres'); }
+
+						</script>
+					</p>
+					<p id="edd-last-name-wrap">
+						<label class="edd-label" for="telefono">
+						Teléfono </label>
+						<input class="edd-input required" type="tel" name="edd_last" id="telefono" placeholder="Teléfono" value="" >
+					</p>	
+				</fieldset>
+				<fieldset id="edd_purchase_submit">
+					<p id="edd_final_total_wrap">
+						<strong></strong>
+						
+					</p>
+					<input type="hidden" name="edd_action" value="purchase">
+					<input type="hidden" name="edd-gateway" value="manual">
+					<input type="submit" formvalidate  class="edd-submit button" id="edd-purchase-button" name="edd-purchase" value="Guardar cambios"  >
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+</section>
+
+<!-- CALL TO ACTION =============================-->
+<section class="content-block" style="background-color:#00bba7;">
+<div class="container text-center">
+	<div class="row">
+		<div class="col-sm-10 col-sm-offset-1">
+			<div class="item" data-scrollreveal="enter top over 0.4s after 0.1s">
+				
+				</h1>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+
+<!-- FOOTER =============================-->
+<div class="footer text-center">
+	<div class="container">
+		<div class="row">
+			<p class="footernote">
+				 UHospital online
+			</p>
+			<ul class="social-iconsfooter">
+				<li><a href="#"><i class="fa fa-phone"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+				<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+			</ul>
+			<p>
+				 &copy; 2021 U Hospital<br/>
+				Luisa María Ortíz Romero 
+			</p>
+		</div>
+	</div>
+</div>
+
+<!-- SCRIPTS =============================-->
+<script src="../js/jquery-.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/anim.js"></script>
+<script src="../Paciente/funciones.js"></script>
+</body>
+</html>

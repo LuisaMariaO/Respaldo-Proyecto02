@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="../images/icon.ico">
+  <title>Administrador</title>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://unicons.iconscout.com/release/v3.0.6/css/line.css'>
+<link rel="stylesheet" href="./style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.5/jspdf.plugin.autotable.min.js"></script>
+    <style>
+      html, body {
+      height:50%;
+      }
+       
+      img.sel {
+      display:grid;
+      margin:auto 10%;
+      height:auto;
+      width:100%;
+      }
+      </style>
+</head>
+<body id="cuerpo">
+<!-- partial:index.partial.html -->
+<aside class="sidebar position-fixed top-0 left-0 overflow-auto h-100 float-left" id="show-side-navigation1">
+  <i class="uil-bars close-aside d-md-none d-lg-none" data-close="show-side-navigation1"></i>
+  <div class="sidebar-header d-flex justify-content-center align-items-center px-3 py-4">
+    <img
+         class="rounded-pill img-fluid"
+         width="65"
+         src="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/512x512/plain/user.png"
+         alt="">
+    <div class="ms-2">
+      <h5 class="fs-6 mb-0">
+        <a class="text-decoration-none" href="#">Herbert Reyes</a>
+      </h5>
+      <p class="mt-1 mb-0">Administrador</p>
+    </div>
+  </div>
+
+  <div class="search position-relative text-center px-4 py-3 mt-2">
+    <input type="text" class="form-control w-100 border-0 bg-transparent" placeholder="Search here">
+    <i class="fa fa-search position-absolute d-block fs-6"></i>
+  </div>
+
+
+  <i class="uil-home"></i> 
+  <a href="#inicio"> Dashboard</a>  
+  <p></p>
+  <i class="uil-eye"></i> 
+  <a href="#Registro"> Datos registrados</a>
+  <p></p>
+  <i class="uil-file"></i> 
+  <a href="#Cargas">Carga de archivos</a>
+  <p>
+   
+  </p>
+ <p></p>
+ <i class="uil-clipboard"></i> 
+  <a href="#Reportes">Reportes</a>
+  <p>
+   
+    <p></p>
+    <i class="uil-chart"></i> 
+    <a href=""> Estadísticas</a>
+   <p></p>  
+
+  </p>
+ <p></p>
+ <i class="uil-circle"></i> 
+ <a href="../login/login.html"> Cerrar Sesión</a>
+<p></p>
+
+
+
+  
+</aside>
+
+<section id="wrapper">
+  <nav class="navbar navbar-expand-md">
+    <div class="container-fluid mx-2">
+      <div class="navbar-header">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-navbar" aria-controls="toggle-navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="uil-bars text-white"></i>
+        </button>
+      
+      </div>
+      <div class="collapse navbar-collapse" id="inicio">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Configuración
+            </a>
+  
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="#">My account</a>
+              </li>
+              <li><a class="dropdown-item" href="#">My inbox</a>
+              </li>
+              <li><a class="dropdown-item" href="#">Help</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Log out</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="uil-comments-alt"></i><span>23</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="uil-bell"></i><span>98</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i data-show="show-side-navigation1" class="uil-bars show-side-btn"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="p-4">
+    <div class="welcome">
+      <div class="content rounded-3 p-3">
+        <img src="../images/logo2.png">
+        <p class="mb-0"></p>
+      </div>
+    </div>
+
+    <section class="statistics mt-4">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3">
+            <i class="uil-users-alt fs-2 text-center bg-transparent rounded-circle"></i>
+            <div class="ms-3">
+              <div class="d-flex align-items-center" id="numpacientes">
+                <h3 class="mb-0" >1,245</h3> <span class="d-block ms-2">Pacientes</span>
+              </div>
+              <p class="fs-normal mb-0"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3">
+            <i class=" uil-file-medical fs-2 text-center rounded-circle"></i>
+            <div class="ms-3" id="pop">
+              <div class="d-flex align-items-center">
+                <h3 class="mb-0">34</h3> <span class="d-block ms-2">Médicos</span>
+              </div>
+              <p class="fs-normal mb-0"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="box d-flex rounded-2 align-items-center p-3">
+            <i class="uil-pen fs-2 text-center rounded-circle"></i>
+            <div class="ms-3">
+              <div class="d-flex align-items-center">
+                <h3 class="mb-0">60</h3> <span class="d-block ms-2">Enfermeras</span>
+              </div>
+              <p class="fs-normal mb-0"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+
+    <section class="charts mt-4" id="Registro">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="chart-container rounded-2 p-3">
+            <h3 class="fs-6 mb-3">Pacientes</h3>
+            
+              
+            <div id="tablausers" class="row">
+              
+            </div>
+            
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="chart-container rounded-2 p-3">
+            <h3 class="fs-6 mb-3">Médicos</h3>
+            <div id="tablamedicos" class="row"></div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    <section class="charts mt-4">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="chart-container rounded-2 p-3">
+            <h3 class="fs-6 mb-3">Enfermeras</h3>
+            <div id="tablaenfermeras" class="row"> </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="chart-container rounded-2 p-3">
+            <h3 class="fs-6 mb-3">Medicamentos</h3>
+            <div id="tablamedicamentos" class="row"></div>
+          </div>
+        </div>
+        
+      </div>
+
+     
+    </section>
+   
+
+    <section class="statis mt-4 text-center" >
+      <div class="row">
+        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+          <div class="box bg-white p-3" id="Cargas">
+            <i class="uil-users-alt"></i> Cargar pacientes
+            <form action="" class="archivos" onsubmit="return false"> <p></p>
+              <label for="carga">Seleccione un archivo:</label>
+              <input type="file"   id="carga" name="carga"
+              accept=".csv"><br><br>
+              <button style="background-color:cadetblue ;" onclick="cargar()" > Cargar </button>
+           
+            <p class="lead"></p>
+          </div>
+        </div>
+       
+    </section>
+    <section class="statis mt-4 text-center" >
+      <div class="row">
+        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+          <div class="box bg-white-3" id="Cargas"> 
+            <i class="uil-file-medical"></i> Cargar doctores
+            <form  class="archivos" onsubmit="return false;"> <p></p>
+              <label for=" cargamed" class="archivos">Seleccione un archivo:</label>
+              
+              <input type="file" id="cargamed" name="cargamed" accept=".csv" class="archivos"><br><br>
+              <button style="background-color:cadetblue ;" onclick="cargarmedicos()" > Cargar </button>
+            <p class="lead"></p> </form>
+          </div>
+        </div>
+       
+    </section>
+    <section class="statis mt-4 text-center" >
+      <div class="row">
+        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+          <div class="box bg-white p-3" id="Cargas">
+            <i class="uil-pen"></i> Cargar enfermeras <p></p>
+            <form action="" class="archivos" onsubmit="return false;">
+              <label for="myfile3" class="archivos">Seleccione un archivo:</label>
+              <input type="file" id="cargaenf" accept=".csv"  class="archivos"><br><br>
+              <button style="background-color:cadetblue ;" onclick="cargarenfermeras();" > Cargar </button>
+            </form>
+            <p class="lead"></p>
+          </div>
+        </div>
+       
+    </section>
+    <section class="statis mt-4 text-center" >
+      <div class="row">
+        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+          <div class="box bg-white p-3" id="Cargas">
+            <i class="uil-thermometer"></i> Cargar medicamentos <p></p>
+            <form action="" class="archivos" onsubmit="return false">
+              <label for="myfile4" class="archivos">Seleccione un archivo:</label>
+              <input type="file" id="cargamedi" accept=".csv" name="myfile4" class="archivos"><br><br>
+              <button style="background-color:cadetblue ;" onclick="cargarmedicamentos()" > Cargar </button>
+            
+            <p class="lead"></p>
+          </div>
+        </div>
+       
+    </section>
+    <section class="charts mt-4">
+      <div class="reportcontainer">
+        <h3 class="fs-6 mb-3">Reportes</h3>
+        <div id="Reportes">
+          <button class="reportes" onclick="pdfpacientes()"> Descargar reporte de pacientes</button>
+          <button class="reportes1" onclick="pdfdoctores()"> Descargar reporte de médicos</button>
+          <button class="reportes" onclick="pdfenfermeras()"> Descargar reporte de enfermeras</button>
+          <button class="reportes1" onclick="pdfmedicamentos()"> Descargar reporte de medicamentos</button>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+<section>
+
+<!-- partial -->
+<script src="../admin/acciones.js"></script>
+<script src="../admin/pdf.js"></script>
+
+<script src='https://cdn.jsdelivr.net/npm/chart.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.jshttps://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js'></script>
+<script  src="./script.js"></script>
+</body>
+</html>
